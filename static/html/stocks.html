@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Stocks</title>
+        <link rel="stylesheet" href="/css/mycontactsstyle.css">
+        <script src="../js/stocks.js"></script>
+    </head>
+    <body>
+        <nav class="nav_bar">
+            <a class="button" href="mycontacts.html">My Contacts</a>
+            <a class="button" href="aboutme.html">About Me</a>
+            <a class="button" href="add-contact.html">Add Contact</a>
+            <a class="button" href="added-contacts.html">Added Contact</a>
+            <a class="button" href="stocks.html">Stocks</a>
+        </nav>
+        <h1>Stock Input</h1>
+        <lable for:="stock-input">Ticker symbol input here: </lable>
+        <input type="text" id="stock-input" name="stock-input" placeholder="AAPL, MSFT, etc.">
+        <button type="button" onclick="getStocks()">Get Stock Data</button>
+        <br>
+        <h3>API Response</h3>
+        <textarea id="stock-result" name="stock-result" rows="50" cols="50"></textarea>
+        <script>
+            async function getStocks() {
+                var stockSymbol = document.getElementById('stock-input').value;
+                var resultArea = document.getElementById('stock-result');
+                var stocks = new Stocks('B5Z66DYCO4072XZU') 
+                var result = await stocks.timeSeries({
+                    symbol: stockSymbol,
+                    interval: '1min',
+                    amount: 10
+                });
+                document.getElementById("stock-result").innerHTML = JSON.stringify(result, null, 2);
+            }
+        </script>
+    </body>
+</html>

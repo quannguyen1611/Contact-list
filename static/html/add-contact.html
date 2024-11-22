@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Input Form</title>
+        <link rel="stylesheet" href="/css/mycontactsstyle.css">
+        <script src="../js/script.js"></script>
+    </head>
+    <body>
+        <nav class="nav_bar">
+            <a class="button" href="mycontacts.html">My Contacts</a>
+            <a class="button" href="aboutme.html">About Me</a>
+            <a class="button" href="add-contact.html">Add Contact</a>
+            <a class="button" href="added-contacts.html">Added Contact</a>
+            <a class="button" href="stocks.html">Stocks</a>
+        </nav>
+        <div class="add-contact-container">
+            <form name="contactform" action="/added-contacts.html" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" pattern="^[a-zA-Z0-9]+(?: [a-zA-Z0-9]+)*$" required>
+                <br><br>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                <br><br>
+                <label for="contact_info">Contact Information:</label>
+                <input type="text" id="contact_info" name="contact_info" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <br><br>
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website" pattern="https?://.+" required>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="map"></div>
+            <script async
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDA5p8w5AR25nAu7LumsIdxMUemAIUZBM&loading=async&libraries=places&callback=initMap">
+            </script>
+        </div>
+    </body>
+</html>

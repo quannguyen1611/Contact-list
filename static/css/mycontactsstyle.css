@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+}
+.container2{
+    display: flex;
+    flex-direction: row;
+}
+.nav_bar{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(231, 231, 231);
+}
+.nav_bar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 15px;;
+}
+.button {
+    display: inline-block;
+    padding: 14px 16px;
+    background-color: inherit;
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin: 0;
+}
+.nav_bar a:hover {
+    color: blue;
+}
+th{
+    border: 1px solid black;
+}
+td{
+    padding: 10px;
+}
+table, td{
+    border: 1px solid black;
+    height: 70px;
+    vertical-align: middle;
+}
+td img{
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+table tr:hover td img {
+    display: inline-block; 
+}
+table tr:nth-child(odd){
+    background-color: rgb(228, 226, 226);
+}
+.large_img img {
+    width: 500px;
+    height: 100%;;
+}
+.box0 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    align-items: stretch;
+}
+.box1, .box2, .box3, .box5, .box6{
+    border: 1px solid black;
+    padding: 10px;
+}
+.box2, .box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box4{
+    display: flex;
+    flex-direction: row;
+}
+.box5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    height: 400px; 
+    width: 100%;
+}
+#directions {
+    width: 30%;
+    padding: 20px;
+    background-color: rgb(228, 226, 226);
+}
+
+#directionsPanel {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 300px; 
+    height: 400px; 
+    overflow-y: scroll;
+    background-color: white;
+}
+.add-contact-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+.mySlides {
+    display: none;
+}
+.large_img{
+    display: flex;
+    flex-direction: column;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px; 
+    margin: 10px; 
+    right: 10px;
+}
